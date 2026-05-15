@@ -1,0 +1,44 @@
+{
+  "name": "backend_video_processing",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon",
+    "build": "tsc && tsc-alias && cpy \"src/assets/**/*\" dist/assets --parents",
+    "start": "npm run build && node dist/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@deepgram/captions": "^1.2.0",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.7.0",
+    "@types/request-ip": "^0.0.41",
+    "nodemon": "^3.1.14",
+    "tsx": "^4.21.1",
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.1046.0",
+    "@aws-sdk/lib-storage": "^3.1046.0",
+    "@aws-sdk/s3-request-presigner": "^3.1046.0",
+    "@bull-board/api": "^7.0.0",
+    "@bull-board/express": "^7.0.0",
+    "@deepgram/sdk": "^5.2.0",
+    "axios": "^1.16.1",
+    "bullmq": "^5.76.8",
+    "dotenv": "^17.4.2",
+    "express": "4.19.2",
+    "express-rate-limit": "^8.5.2",
+    "express-validator": "^7.3.2",
+    "helmet": "^8.1.0",
+    "ioredis": "^5.10.1",
+    "mongoose": "^9.6.2",
+    "request-ip": "^3.3.0",
+    "zod": "^4.4.3"
+  }
+}
